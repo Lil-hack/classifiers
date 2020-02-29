@@ -17,7 +17,7 @@ if __name__ == '__main__':
             faces = face_cascade.detectMultiScale(resp, 1.3, 5, minSize=(30, 30))
             result_time+=time.time()-t0
             print(faces)
-        print(result_time)
+        print('Время выполнения алгоритма Хаара: '+ str(result_time))
 
     if speed_test==2:
         result_time=0
@@ -28,7 +28,7 @@ if __name__ == '__main__':
             faces = detector.detect_faces(img)
             result_time+=time.time()-t0
             print(faces)
-        print(result_time)
+        print('Время выполнения алгоритма MTCNN: '+ str(result_time))
 
     if speed_test==3:
         result_time = 0
@@ -38,4 +38,4 @@ if __name__ == '__main__':
             face_locations = face_recognition.face_locations(img)
             result_time += time.time() - t0
             print(face_locations)
-        print(result_time)
+        print('Время выполнения алгоритма Dlib: '+ str(result_time))
