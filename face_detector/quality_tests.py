@@ -21,7 +21,7 @@ if __name__ == '__main__':
                 count_face += len(faces)
                 writer.writerow({'N': i, 'Haar': len(faces)})
 
-        print (count_face)
+        print('Количество совпадений алгоритма Хаара: '+ str(count_face))
 
     if quality_test==2:
         count_face=0
@@ -36,7 +36,7 @@ if __name__ == '__main__':
                 count_face += len(faces)
                 writer.writerow({'N': i, 'MTCNN': len(faces)})
 
-        print (count_face)
+        print('Количество совпадений алгоритма MTCNN: ' + str(count_face))
 
     if quality_test==3:
         count_face = 0
@@ -50,5 +50,5 @@ if __name__ == '__main__':
                 count_face += len(faces)
                 writer.writerow({'N': i, 'Dlib': len(faces)})
 
-        print(count_face)
+        print('Количество совпадений алгоритма Dlib: ' + str(count_face))
 
